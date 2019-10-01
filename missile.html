@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Missile Tracking</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Back to My Portfolio</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/jason-feldkamp" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Missile Tracking<br />
+									</h1>
+									<p>A script that finds the best trajectory for a friendly missile to intercept an enemy missile.</p>
+									<a href="/codes/missile.zip" download> Download Code [.zip]</a>
+								</header>
+								<div class="image main"><img src="images/pic02.jpg" alt="" /></div>
+								<p>While surfing Wikipedia, I found that homing missiles have a guidance system that either uses infrared or radar sensors to determine the distance away from enemy objects. I was then inspired to write a MATLAB script that would take this distance data and find the best intercept trajectory for a counter-missile.</p>
+								<p>The friendly missile first observes the enemy missile and collects 3 position values over 3 time steps. It then numerically differentiates these values to get 2 velocity values and 1 acceleration value. The algorithm then predicts the enemy missile’s flight path using Euler’s method, including the time, position, velocity and acceleration at each point along the path. Now the fun begins. The algorithm calculates the time it would take for the friendly missile to intercept the enemy missile at each point along its predicted flight path, taking into consideration the friendly missile’s current position, velocity, and acceleration. Next, the error between the times of the predicted enemy missile and the friendly missile intercept are calculated at each point along the path. The minimum of this error function corresponds to the index of the point along the flight path that would be the best trajectory, and the missile points in that direction. This entire process is repeated for each time step until intercept occurs. This algorithm will work for an enemy missile undergoing any flight path or acceleration, not just gravity.</p>
+								<p>The 1st clip is with low range tracking and the rest are with a much higher trajectory prediction range. Also the animations of the side by side graph shows the iterative minimization of the error function until impact occurs.</p>
+								<h2 class="center">Videos</h2>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/2YPTE6fZtuk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<br>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/odAftdKXybA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<br>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/rvk9lMhmV88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<br>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/MDTOVa90EAs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Jason Feldkamp</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
