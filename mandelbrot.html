@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mandelbrot Set</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Back to My Portfolio</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/jason-feldkamp" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Mandelbrot Set<br />
+									</h1>
+									<p>A script that produces a classic fractal.</p>
+									<a href="/codes/mandelbrot.m" download> Download Code [.m]</a>
+								</header>
+								<div class="image main"><img src="images/mandelbrot.jpg" alt="" /></div>
+                                <p>This is a Mandelbrot set my computer generated. The algorithm is known as the escape-time method. Basically, divide the desired range into a grid, and perform over each pixel in the grid: iterate the complex equation f(z) = z^2 + c and stop if the result grows bigger than 2. If it remains bounded, have a pre-defined escape time (ie. 10000 iterations) before moving to the next pixel. Record the iterations for each pixel, assign it to a color map, and voila the holy grail of fractals appears. Further exploration through different domains of the set can yield infinitely different possibilities.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Jason Feldkamp</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
